@@ -10,13 +10,21 @@
 - Link campaigns to contact lists
 - RESTful API endpoints
 
+
+## Docker Installation
+The project includes a docker-compose.yml file for easy setup.
+```bash
+docker compose up -d
+```
+
+## Manual Installation
+
 ## Requirements
 
 - PHP 8.1 or higher
 - Node.js 16+ and npm
 - Composer
 
-## Installation
 
 1. Clone the repository
 ```bash
@@ -47,6 +55,7 @@ php artisan key:generate
 6. Run database migrations
 ```bash
 php artisan migrate
+php artisan db:seed #(Optional, if you want to get going with some sample data)
 ```
 
 7. Build frontend assets

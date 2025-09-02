@@ -13,7 +13,7 @@ Route::get('/', function () {
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
-        return Inertia::render('dashboard');
+        return redirect()->to('campaigns');
     })->name('dashboard');
 
     Route::resource('contacts'      , ContactController::class    );

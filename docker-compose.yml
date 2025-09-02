@@ -1,0 +1,6 @@
+services:
+    campaign-man:
+        build: .
+        container_name: campaign-man
+        ports:
+            - "8000:8000"
