@@ -2,6 +2,7 @@
 
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApiController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CampaignController;
 use App\Http\Controllers\ContactListController;
@@ -35,6 +36,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('campaigns/{campaign}/contact-lists/{contactList}'  ,[CampaignController::class, 'attachContactList'    ])->name('campaigns.attach-contact-list');
     Route::delete('campaigns/{campaign}/contact-lists/{contactList}',[CampaignController::class, 'detachContactList'    ])->name('campaigns.detach-contact-list');
 
+
+    //--------
+    // API Tester page
+    //--------
+    Route::get('api-tester', [ApiController::class, 'index'])->name('api.index');
 });
 
 require __DIR__.'/settings.php';

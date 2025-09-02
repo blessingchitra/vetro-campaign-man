@@ -5,7 +5,7 @@ import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, Sid
 import { dashboard } from '@/routes';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
-import { LayoutGrid, UserCircle, Users, Mail } from 'lucide-react';
+import { LayoutGrid, UserCircle, Users, Mail, BookOpen } from 'lucide-react';
 import AppLogo from './app-logo';
 
 const mainNavItems: NavItem[] = [
@@ -28,6 +28,11 @@ const mainNavItems: NavItem[] = [
         title: 'Contact Lists',
         href: '/contact-lists',
         icon: Users,
+    },
+    {
+        title: 'API Tester',
+        href: '/api-tester',
+        icon: BookOpen,
     },
 ];
 
