@@ -11,6 +11,10 @@ class Campaign extends Model
         'body',
     ];
 
+    protected $hidden = [
+        'pivot',
+    ];
+
     public function contactLists()
     {
         return $this->belongsToMany(ContactList::class, 'campaign_contact_list')->withTimestamps();

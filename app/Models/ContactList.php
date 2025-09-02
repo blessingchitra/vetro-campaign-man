@@ -11,6 +11,10 @@ class ContactList extends Model
         'description',
     ];
 
+    protected $hidden = [
+        'pivot',
+    ];
+
     public function contacts()
     {
         return $this->belongsToMany(Contact::class, 'contact_contact_list')->withTimestamps();
