@@ -13,11 +13,11 @@ class ContactList extends Model
 
     public function contacts()
     {
-        return $this->belongsToMany(Contact::class);
+        return $this->belongsToMany(Contact::class, 'contact_contact_list')->withTimestamps();
     }
 
     public function campaigns()
     {
-        return $this->belongsToMany(Campaign::class)->withTimestamps();
+        return $this->belongsToMany(Campaign::class, 'campaign_contact_list')->withTimestamps();
     }
 }

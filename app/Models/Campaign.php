@@ -13,6 +13,6 @@ class Campaign extends Model
 
     public function contactLists()
     {
-        return $this->belongsToMany(ContactList::class)->withTimestamps();
+        return $this->belongsToMany(ContactList::class, 'campaign_contact_list')->withTimestamps();
     }
 }
