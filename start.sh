@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 if [ ! -f .env ]; then
     cp .env.example .env
@@ -8,6 +8,8 @@ php artisan key:generate --force
 
 echo "yes" | php artisan migrate --force
 php artisan db:seed
+
+npm run build
 
 
 # Start Laravel development server
